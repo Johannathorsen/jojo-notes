@@ -6,7 +6,7 @@
 
 - remove remote branches that no longer exists: `git remote prune origin`
 
-- remove local branches that no longer exists on remote: `git fetch -p && for branch in git branch -vv | grep ': gone]' | awk '{print $1}'; do git branch -D $branch; done`
+- remove local branches that no longer exists on remote: `git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done`
 
 - update ubuntu: `sudo apt update` -> `sudo apt dist-upgrade`
 
